@@ -1,0 +1,103 @@
+.banner {
+  background-image: url('../src/Images/BannerAsset/banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: brightness(0.5); */
+}
+
+.slider-track {
+  display: flex;
+  max-width: calc(6 * 200px);
+  align-items: center;
+  animation: scroll 15s linear 1s infinite alternate;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* .banner::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255); 
+  border-radius: 10px;
+} */
+
+/* Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+  background: #041782; 
+} */
+
+.slide {
+  cursor: pointer;
+  /* width: 200px; */
+  backdrop-filter: invert(.2);
+}
+
+.banner:hover {
+  animation-play-state: paused;
+}
+
+.slider-track img {
+  width: 100%;
+}
+
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.slide img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: .3s ease-in-out;
+  backdrop-filter: invert(.2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-400px * 3));
+  }
+}
+
+.more {
+  position: absolute;
+  margin-left: 90%;
+  margin-right: auto;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.hovering-img{
+  transition:.2s ease-in-out
+}
+
+.hovering-img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hover-routes{
+  /* border-bottom: 1px solid; */
+  transition: .5s ease-in-out;
+}
+.hover-routes:hover{
+  cursor: pointer;
+  border-bottom: 2px solid rgb(42, 117, 238) !important;
+}
